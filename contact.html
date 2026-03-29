@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Rollin. Premium Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Fredoka:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .contact-container {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .contact-form-side {
+            flex: 1;
+            background: white;
+            padding: 3rem;
+            border-radius: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info-side {
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0;
+            /* Remove padding to ensure top/bottom alignment */
+        }
+
+        .contact-title {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 3rem;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.5rem 1.8rem;
+            border-radius: 25px;
+            border: 2px solid var(--bg-beige);
+            background: var(--bg-beige);
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+            background: white;
+            box-shadow: 0 5px 15px rgba(248, 107, 77, 0.1);
+        }
+
+        .submit-contact-btn {
+            background-color: var(--brown);
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-top: 1rem;
+        }
+
+        .submit-contact-btn:hover {
+            transform: scale(1.05);
+            background-color: var(--orange);
+        }
+
+        .contact-detail-box {
+            background: var(--white);
+            padding: 1.2rem 2rem;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-icon-circle {
+            width: 50px;
+            height: 50px;
+            background: var(--yellow);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-detail-content h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            opacity: 0.5;
+            text-transform: uppercase;
+        }
+
+        .contact-detail-content p {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .contact-form-side {
+                padding: 2rem;
+                border-radius: 40px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .contact-info-side {
+                width: 100%;
+                gap: 1.5rem;
+            }
+
+            .contact-detail-box {
+                padding: 1.5rem;
+                border-radius: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-left">
+                <img src="assets/Logo.png" alt="Rollin." class="logo">
+                <span class="logo-text">Chafa Cafe</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="drop-trigger">LOCATION <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="https://maps.app.goo.gl/PW7GethzafXmwTbv9" target="_blank">KOREGAON PARK</a>
+                        <a href="https://maps.app.goo.gl/28jZL6SAoCJpfGXd9" target="_blank">WANOWRIE</a>
+                    </div>
+                </div>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="nav-right">
+                <button class="btn-primary">ORDER NOW</button>
+                <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="badge"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobile-nav-overlay">
+            <div class="mobile-menu-header">
+                <div class="nav-left">
+                    <img src="assets/Logo.png" alt="Rollin." class="logo">
+                    <span class="logo-text">Chafa Cafe</span>
+                </div>
+                <div class="close-menu-btn"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="contact.html">CONTACT</a>
+
+                <div class="location-group">
+                    <span>VISIT OUR LOCATIONS</span>
+                    <a href="https://maps.app.goo.gl/PW7GethzafXmwTbv9" target="_blank">KOREGAON PARK</a>
+                    <a href="https://maps.app.goo.gl/28jZL6SAoCJpfGXd9" target="_blank">WANOWRIE</a>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="contact-title">GET IN TOUCH WITH US .</h1>
+
+        <div class="contact-container">
+            <div class="contact-form-side">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>YOUR NAME</label>
+                        <input type="text" placeholder="e.g. John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>EMAIL ADDRESS</label>
+                        <input type="email" placeholder="e.g. hello@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>MESSAGE</label>
+                    <textarea rows="6" placeholder="How can we help you?"></textarea>
+                </div>
+                <button class="submit-contact-btn">SEND MESSAGE</button>
+            </div>
+
+            <div class="contact-info-side">
+                <div class="contact-detail-box">
+                    <div class="contact-icon-circle">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-detail-content">
+                        <h4>Phone</h4>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail-box">
+                    <div class="contact-icon-circle">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-detail-content">
+                        <h4>Email</h4>
+                        <p>hello@chafacafe.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail-box">
+                    <div class="contact-icon-circle">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-detail-content">
+                        <h4>Locations</h4>
+                        <p>Koregaon Park & Wanowrie</p>
+                    </div>
+                </div>
+                <div class="contact-detail-box">
+                    <div class="contact-icon-circle">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="contact-detail-content">
+                        <h4>Hours</h4>
+                        <p>Mon - Sun: 8am - 10pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from(".contact-title", {
+                opacity: 0,
+                y: 30,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+
+            gsap.from(".contact-form-side", {
+                opacity: 0,
+                x: -50,
+                duration: 1,
+                ease: "power2.out",
+                delay: 0.3
+            });
+
+            gsap.from(".contact-detail-box", {
+                opacity: 0,
+                x: 50,
+                stagger: 0.2,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                delay: 0.5
+            });
+        });
+    </script>
+</body>
+
+</html>

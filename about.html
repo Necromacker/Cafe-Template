@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Rollin. Premium Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Fredoka:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .about-hero {
+            background-color: var(--white);
+            border-radius: 80px;
+            padding: 6rem 4rem;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-image {
+            flex: 0 0 50%;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 60px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h1 {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: var(--brown);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-beige);
+            border-radius: 40px;
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            display: block;
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 3rem;
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                flex-direction: column;
+                padding: 3rem 2rem;
+                gap: 2rem;
+                border-radius: 40px;
+            }
+
+            .about-image {
+                width: 100%;
+            }
+
+            .about-image img {
+                height: 300px;
+                border-radius: 30px;
+            }
+
+            .about-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .stat-item {
+                padding: 1.5rem;
+                border-radius: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-left">
+                <img src="assets/Logo.png" alt="Rollin." class="logo">
+                <span class="logo-text">Chafa Cafe</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="drop-trigger">LOCATION <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="https://maps.app.goo.gl/PW7GethzafXmwTbv9" target="_blank">KOREGAON PARK</a>
+                        <a href="https://maps.app.goo.gl/28jZL6SAoCJpfGXd9" target="_blank">WANOWRIE</a>
+                    </div>
+                </div>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="nav-right">
+                <button class="btn-primary">ORDER NOW</button>
+                <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="badge"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobile-nav-overlay">
+            <div class="mobile-menu-header">
+                <div class="nav-left">
+                    <img src="assets/Logo.png" alt="Rollin." class="logo">
+                    <span class="logo-text">Chafa Cafe</span>
+                </div>
+                <div class="close-menu-btn"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="contact.html">CONTACT</a>
+
+                <div class="location-group">
+                    <span>VISIT OUR LOCATIONS</span>
+                    <a href="https://maps.app.goo.gl/PW7GethzafXmwTbv9" target="_blank">KOREGAON PARK</a>
+                    <a href="https://maps.app.goo.gl/28jZL6SAoCJpfGXd9" target="_blank">WANOWRIE</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="about-hero">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop"
+                    alt="Our bakery interior">
+            </div>
+            <div class="about-text">
+                <h1>OUR PASSION FOR COOKING</h1>
+                <p>SStarting as a small family project in 2010, Chafa Cafe has grown into a beloved neighborhood
+                    sanctuary where every cup tells a story of ethical sourcing and quality roasting.</p>
+                <p>We source only the finest single-origin beans to ensure every sip is a moment of pure caffeine
+                    delight.</p>
+            </div>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Years of Cooking</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Recipes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10k+</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from(".about-hero", {
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+
+            gsap.from(".stat-item", {
+                opacity: 0,
+                scale: 0.8,
+                stagger: 0.2,
+                duration: 1,
+                ease: "back.out(1.7)",
+                delay: 0.5
+            });
+        });
+    </script>
+</body>
+
+</html>
